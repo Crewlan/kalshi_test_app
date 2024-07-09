@@ -1,0 +1,20 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+
+import '../utils/app_images.dart';
+
+class KalshiHeader extends StatelessWidget {
+  const KalshiHeader({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 30),
+        child: SizedBox(
+          child: SvgPicture.asset(AppImages.kalshiLogoBlack),
+        ),
+      ),
+    );
+  }
+}

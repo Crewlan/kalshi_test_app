@@ -1,4 +1,4 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 
 class AppColors {
   static const lightest = Color(0xFFFFFFFF);
@@ -11,4 +11,6 @@ class AppColors {
   static const grayLightest = Color(0xFFE9EEF2);
   static const grayMedium = Color(0xFF4D6475);
   static const backgroundColor = Color(0xFFF4F8FA);
+  static const blueDarkest = Color(0xFF1E2A32);
+  static const boxShadow = Color.fromARGB(08, 30, 42, 50);
 }

@@ -1,12 +1,24 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:kalshi_test_app/core/routes/routes.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../features/financial/presentation/cubit/financial_health_cubit.dart';
+import '../../features/financial/presentation/screens/financial_screen.dart';
+import '../../injection_container.dart';
+import 'routes.dart';
 
 class AppRouter {
   Route generateRoutes(RouteSettings settings) {
+    final financialHealthCubit = sl<FinancialHealthCubit>();
     switch (settings.name) {
-      case Routes.calculator:
-      case Routes.results:
+      case Routes.financialHealth:
+        return CupertinoPageRoute(
+          builder: (context) => BlocProvider.value(
+            value: financialHealthCubit,
+            child: const FinancialScreen(),
+          ),
+        );
+      case Routes.resultsScreen:
       default:
         return CupertinoPageRoute(
           settings: const RouteSettings(name: 'error_default'),
