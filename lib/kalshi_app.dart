@@ -19,7 +19,7 @@ class KalshiApp extends StatelessWidget {
       title: AppStrings.title,
       themeMode: ThemeMode.light,
       onGenerateRoute: _router.generateRoutes,
-      initialRoute: Routes.calculator,
+      initialRoute: Routes.financialHealth,
       debugShowCheckedModeBanner: false,
       builder: (context, child) {
         return MediaQuery(

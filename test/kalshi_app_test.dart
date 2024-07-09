@@ -14,7 +14,7 @@ void main() {
 
     // Verify if the initial route is set to Routes.calculator.
     final materialApp = tester.widget<MaterialApp>(find.byType(MaterialApp));
-    expect(materialApp.initialRoute, Routes.calculator);
+    expect(materialApp.initialRoute, Routes.financialHealth);
 
     // Verify if the Scaffold background color is set correctly.
     expect(
