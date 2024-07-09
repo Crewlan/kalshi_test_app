@@ -4,7 +4,7 @@ import '../../../../core/cubit/kalshi_cubit.dart';
 import '../../data/models/financial_health_status.dart';
 import '../../domain/usecases/calculate_financial_health.dart';
 
-part 'financial_state.dart';
+part 'financial_health_state.dart';
 
 class FinancialHealthCubit extends KalshiCubit<FinancialHealthState> {
   final CalculateFinancialHealth calculateFinancialHealth;

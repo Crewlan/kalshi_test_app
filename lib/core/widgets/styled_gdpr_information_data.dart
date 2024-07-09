@@ -5,8 +5,8 @@ import '../utils/app_colors.dart';
 import '../utils/app_images.dart';
 import '../utils/app_strings.dart';
 
-class StyledGrpdInformationData extends StatelessWidget {
-  const StyledGrpdInformationData({super.key});
+class StyledGdprInformationData extends StatelessWidget {
+  const StyledGdprInformationData({super.key});
 
   @override
   Widget build(BuildContext context) {

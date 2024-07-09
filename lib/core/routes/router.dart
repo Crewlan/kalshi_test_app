@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../features/financial/presentation/cubit/financial_cubit.dart';
+import '../../features/financial/presentation/cubit/financial_health_cubit.dart';
 import '../../features/financial/presentation/screens/financial_screen.dart';
 import '../../injection_container.dart';
 import 'routes.dart';

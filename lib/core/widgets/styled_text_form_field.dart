@@ -159,7 +159,7 @@ class StyledTextFormField extends StatelessWidget {
       inputFormatters: formatters,
       validator: validator,
       enabled: enabled,
-      autovalidateMode: AutovalidateMode.always,
+      autovalidateMode: AutovalidateMode.onUserInteraction,
       style: TextStyle(
         fontFamily: 'Rubik',
         fontSize: 24,

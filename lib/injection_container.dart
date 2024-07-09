@@ -3,7 +3,7 @@ import 'package:get_it/get_it.dart';
 import 'features/financial/data/repositories/financial_repository_impl.dart';
 import 'features/financial/domain/repositories/financial_repository.dart';
 import 'features/financial/domain/usecases/calculate_financial_health.dart';
-import 'features/financial/presentation/cubit/financial_cubit.dart';
+import 'features/financial/presentation/cubit/financial_health_cubit.dart';
 
 final sl = GetIt.instance;
 
@@ -12,11 +12,11 @@ Future<void> init() async {
     () => FinancialRepositoryImpl(),
   );
 
-  sl.registerLazySingleton(
+  sl.registerLazySingleton<CalculateFinancialHealth>(
     () => CalculateFinancialHealth(repository: sl()),
   );
 
-  sl.registerLazySingleton(
+  sl.registerLazySingleton<FinancialHealthCubit>(
     () => FinancialHealthCubit(calculateFinancialHealth: sl()),
   );
 

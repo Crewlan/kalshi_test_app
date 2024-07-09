@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/extensions/ui_helper_extension.dart';
 import '../../../../core/routes/routes.dart';
-import '../cubit/financial_cubit.dart';
+import '../cubit/financial_health_cubit.dart';
 import 'financial_form_state.dart';
 
 class FinancialScreen extends StatelessWidget {

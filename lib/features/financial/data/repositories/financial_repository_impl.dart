@@ -8,7 +8,8 @@ class FinancialRepositoryImpl implements FinancialRepository {
     double monthlyCosts,
   ) {
     double annualNetIncome = annualGrossIncome - (annualGrossIncome * 0.08);
-    double costsPercentage = (monthlyCosts / annualNetIncome) * 100;
+    double annualCosts = monthlyCosts * 12;
+    double costsPercentage = (annualCosts / annualNetIncome) * 100;
 
     if (costsPercentage <= 25) {
       return FinancialHealthStatus.healthy;

@@ -1,4 +1,4 @@
-part of 'financial_cubit.dart';
+part of 'financial_health_cubit.dart';
 
 enum FinancialStatus { initial, loading, ready }
 
