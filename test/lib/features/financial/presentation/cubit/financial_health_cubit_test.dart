@@ -38,11 +38,8 @@ void main() {
         montlyCosts: monthlyCosts,
       ),
       expect: () => [
-        const FinancialLoading(status: FinancialStatus.loading),
-        const FinancialReady(
-          financialHealthStatus: financialHealthStatus,
-          status: FinancialStatus.ready,
-        ),
+        const FinancialLoading(),
+        const FinancialReady(financialHealthStatus: financialHealthStatus),
       ],
     );
   });
