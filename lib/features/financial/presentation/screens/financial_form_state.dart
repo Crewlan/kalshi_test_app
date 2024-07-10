@@ -16,9 +16,9 @@ import '../cubit/financial_health_cubit.dart';
 import '../widgets/financial_card_information.dart';
 
 /// Presents a [FinancialFormState]
-class FinancialFormState extends StatelessWidget {
+class FinancialFormState extends StatefulWidget {
   /// Takes [annualIncomeController] and [monthlyCostsController] to construct this widget
-  FinancialFormState({
+  const FinancialFormState({
     super.key,
     required this.annualIncomeController,
     required this.monthlyCostsController,
@@ -27,7 +27,13 @@ class FinancialFormState extends StatelessWidget {
   final TextEditingController annualIncomeController;
   final TextEditingController monthlyCostsController;
 
+  @override
+  State<FinancialFormState> createState() => _FinancialFormStateState();
+}
+
+class _FinancialFormStateState extends State<FinancialFormState> {
   final _formKey = GlobalKey<FormState>();
+
   final _cubit = sl<FinancialHealthCubit>();
 
   /// Function to validate forms
@@ -97,7 +103,7 @@ class FinancialFormState extends StatelessWidget {
                           ),
                           const SizedBox(height: 7),
                           StyledTextFormField(
-                            controller: annualIncomeController,
+                            controller: widget.annualIncomeController,
                             validator: _validateNumber,
                             keyboardType: TextInputType.number,
                             enableBorderColor: AppColors.grayLightest,
@@ -119,7 +125,7 @@ class FinancialFormState extends StatelessWidget {
                           ),
                           const SizedBox(height: 7),
                           StyledTextFormField(
-                            controller: monthlyCostsController,
+                            controller: widget.monthlyCostsController,
                             validator: _validateNumber,
                             keyboardType: TextInputType.number,
                             enableBorderColor: AppColors.grayLightest,
@@ -135,11 +141,11 @@ class FinancialFormState extends StatelessWidget {
                               text: AppStrings.financialScreenButtonLabel,
                               action: () {
                                 if (_formKey.currentState!.validate()) {
-                                  var annualIncome =
-                                      double.parse(annualIncomeController.text);
+                                  var annualIncome = double.parse(
+                                      widget.annualIncomeController.text);
 
-                                  var montlyCosts =
-                                      double.parse(monthlyCostsController.text);
+                                  var montlyCosts = double.parse(
+                                      widget.monthlyCostsController.text);
 
                                   _cubit.calculateFinancialWellness(
                                     annualIncome: annualIncome,
