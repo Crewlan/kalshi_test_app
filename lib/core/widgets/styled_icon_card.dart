@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import '../utils/app_colors.dart';
 import '../utils/app_images.dart';
 
+/// Widget to generate a icon with a rounded container
 class StyledIconCard extends StatelessWidget {
   const StyledIconCard({super.key});
 

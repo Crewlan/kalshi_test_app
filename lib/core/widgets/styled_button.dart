@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../extensions/ui_helper_extension.dart';
 import '../utils/app_colors.dart';
 
+/// Widget to create a custom button with parameters
 class StyledButton extends StatelessWidget {
   final String? text;
   final Function? action;

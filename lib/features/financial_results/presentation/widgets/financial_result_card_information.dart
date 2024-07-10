@@ -6,6 +6,7 @@ import 'health_status_bar.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_strings.dart';
 
+/// Presents a [FinancialResultCardInformation]
 class FinancialResultCardInformation extends StatelessWidget {
   const FinancialResultCardInformation({super.key, required this.status});
 

@@ -5,6 +5,7 @@ import '../utils/app_colors.dart';
 import '../utils/app_images.dart';
 import '../utils/app_strings.dart';
 
+/// Widget to generate a card GRPD information
 class StyledGdprInformationData extends StatelessWidget {
   const StyledGdprInformationData({super.key});
 

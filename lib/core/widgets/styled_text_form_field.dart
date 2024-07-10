@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 
 import '../utils/app_colors.dart';
 
+/// Widget to generate a custom text form field with parameters
 class StyledTextFormField extends StatelessWidget {
   final String? labelText;
   final FormFieldValidator<String>? validator;

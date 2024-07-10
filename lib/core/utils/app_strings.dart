@@ -1,3 +1,4 @@
+/// Class to define app strings
 class AppStrings {
   static const title = 'Kalshi App';
   static const financialFormTitleInitial = "Let's find out your ";
@@ -26,4 +27,6 @@ class AppStrings {
   static const financialFormValidationNumber = 'Please enter a valid number';
   static const financialFormValidationMoreThanZero =
       'Value must be greater than zero';
+  static const defaultScreenButtonLabel = 'Go to Home';
+  static const defaultScreenTitleLabel = 'Error';
 }

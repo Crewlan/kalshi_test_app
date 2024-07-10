@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../utils/app_colors.dart';
 
+/// Widget to generate a rich text using two labels with parameters
 class StyledFinancialRichText extends StatelessWidget {
   final String firstLabel;
   final String secondlabel;
