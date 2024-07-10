@@ -1,4 +1,5 @@
+/// Class to define app routes
 class Routes {
-  static const calculator = '/calculator';
-  static const results = '/results';
+  static const financialHealth = '/financialHealth';
+  static const resultsScreen = '/results';
 }

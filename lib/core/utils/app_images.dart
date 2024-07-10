@@ -1,3 +1,4 @@
+/// Class to define app images
 class AppImages {
   static const dollarSign = 'assets/images/dollar_sign.svg';
   static const kalshiLogoBlack = 'assets/images/kalshi_logo_black.svg';

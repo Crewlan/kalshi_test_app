@@ -1,6 +1,6 @@
 name: kalshi_test_app
-description: "A new Flutter project."
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+description: "A mobile application that uses cubit for state management, using clean architecture."
+publish_to: 'none' 
 
 version: 1.0.0+1
 
@@ -10,14 +10,20 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.6
+
   bloc: ^8.1.4
-  flutter_bloc: ^8.1.6
+  cupertino_icons: ^1.0.6
   equatable: ^2.0.5
+  flutter_bloc: ^8.1.6
+  flutter_svg: ^2.0.10+1
+  get_it: ^7.7.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  bloc_test: ^9.1.7
+  mocktail: ^1.0.4
+  coverage: ^1.0.3
 
   flutter_lints: ^3.0.0
 

@@ -6,6 +6,9 @@ import 'core/routes/routes.dart';
 import 'core/utils/app_colors.dart';
 import 'core/utils/app_strings.dart';
 
+/// This class extends StatefulWidget
+///
+/// It build a application and set a configurations
 class KalshiApp extends StatelessWidget {
   KalshiApp({super.key});
 
@@ -19,7 +22,7 @@ class KalshiApp extends StatelessWidget {
       title: AppStrings.title,
       themeMode: ThemeMode.light,
       onGenerateRoute: _router.generateRoutes,
-      initialRoute: Routes.calculator,
+      initialRoute: Routes.financialHealth,
       debugShowCheckedModeBanner: false,
       builder: (context, child) {
         return MediaQuery(
