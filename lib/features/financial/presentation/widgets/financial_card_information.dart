@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_strings.dart';
 
+/// Presents a [FinancialCardInformation]
 class FinancialCardInformation extends StatelessWidget {
   const FinancialCardInformation({super.key});
 

@@ -15,19 +15,22 @@ import '../../../../injection_container.dart';
 import '../cubit/financial_health_cubit.dart';
 import '../widgets/financial_card_information.dart';
 
+/// Presents a [FinancialFormState]
 class FinancialFormState extends StatelessWidget {
-  final TextEditingController annualIncomeController;
-  final TextEditingController monthlyCostsController;
-
+  /// Takes [annualIncomeController] and [monthlyCostsController] to construct this widget
   FinancialFormState({
     super.key,
     required this.annualIncomeController,
     required this.monthlyCostsController,
   });
 
+  final TextEditingController annualIncomeController;
+  final TextEditingController monthlyCostsController;
+
   final _formKey = GlobalKey<FormState>();
   final _cubit = sl<FinancialHealthCubit>();
 
+  /// Function to validate forms
   String? _validateNumber(String? value) {
     if (value == null || value.isEmpty) {
       return AppStrings.financialFormValidationIfIsNull;

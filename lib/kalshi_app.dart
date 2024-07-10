@@ -6,6 +6,9 @@ import 'core/routes/routes.dart';
 import 'core/utils/app_colors.dart';
 import 'core/utils/app_strings.dart';
 
+/// This class extends StatefulWidget
+///
+/// It build a application and set a configurations
 class KalshiApp extends StatelessWidget {
   KalshiApp({super.key});
 

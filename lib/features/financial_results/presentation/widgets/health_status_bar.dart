@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../financial/data/models/financial_health_status.dart';
 
+/// Presents a [HealthStatusBar]
 class HealthStatusBar extends StatelessWidget {
   final FinancialHealthStatus status;
 
@@ -74,13 +75,11 @@ class HealthStatusBar extends StatelessWidget {
               alignment: Alignment.center,
               children: [
                 Positioned(
-                  left: 2 * containerWidth -
-                      10, // Adjust this value to ensure borders overlap correctly
+                  left: 2 * containerWidth - 10,
                   child: buildContainers(status)[2],
                 ),
                 Positioned(
-                  left: containerWidth -
-                      2, // Adjust this value to ensure borders overlap correctly
+                  left: containerWidth - 2,
                   child: buildContainers(status)[1],
                 ),
                 Positioned(

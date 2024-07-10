@@ -1,6 +1,7 @@
 import '../../domain/repositories/financial_repository.dart';
 import '../models/financial_health_status.dart';
 
+/// Class to calculate and return a enum based on math calculation
 class FinancialRepositoryImpl implements FinancialRepository {
   @override
   FinancialHealthStatus calculateFinancialHealth(

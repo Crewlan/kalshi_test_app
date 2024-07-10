@@ -5,8 +5,10 @@ import 'features/financial/domain/repositories/financial_repository.dart';
 import 'features/financial/domain/usecases/calculate_financial_health.dart';
 import 'features/financial/presentation/cubit/financial_health_cubit.dart';
 
+/// Create a GetIt instance
 final sl = GetIt.instance;
 
+/// Register dependencies
 Future<void> init() async {
   sl.registerLazySingleton<FinancialRepository>(
     () => FinancialRepositoryImpl(),

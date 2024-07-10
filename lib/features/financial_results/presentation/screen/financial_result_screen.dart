@@ -11,12 +11,16 @@ import '../../../../core/widgets/styled_icon_card.dart';
 import '../../../financial/data/models/financial_health_status.dart';
 import '../widgets/financial_result_card_information.dart';
 
+/// This class represents a arguments
 class FinancialResultScreenParams {
   final FinancialHealthStatus financialHealthStatus;
 
   FinancialResultScreenParams({required this.financialHealthStatus});
 }
 
+/// This class extends StatelessWidget
+///
+/// It receive a FinancialHealthStatus on parameters to build a custom UI
 class FinancialResultScreen extends StatelessWidget {
   static FinancialResultScreen withArgs(FinancialResultScreenParams args) =>
       FinancialResultScreen(
