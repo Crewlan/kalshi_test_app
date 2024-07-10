@@ -12,23 +12,26 @@ class FinancialScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: context.height,
-      child: SafeArea(
-        child: Scaffold(
-          backgroundColor: AppColors.lightest,
-          body: BlocConsumer<FinancialHealthCubit, FinancialHealthState>(
-            listener: (context, state) {
-              if (state is FinancialReady) {
-                Navigator.of(context).pushNamed(
-                  Routes.resultsScreen,
-                  arguments: state.financialHealthStatus,
-                );
-              }
-            },
-            builder: (context, state) {
-              return const FinancialFormState();
-            },
+    return PopScope(
+      canPop: false,
+      child: SizedBox(
+        height: context.height,
+        child: SafeArea(
+          child: Scaffold(
+            backgroundColor: AppColors.lightest,
+            body: BlocConsumer<FinancialHealthCubit, FinancialHealthState>(
+              listener: (context, state) {
+                if (state is FinancialReady) {
+                  Navigator.of(context).pushNamed(
+                    Routes.resultsScreen,
+                    arguments: state.financialHealthStatus,
+                  );
+                }
+              },
+              builder: (context, state) {
+                return const FinancialFormState();
+              },
+            ),
           ),
         ),
       ),

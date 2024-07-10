@@ -29,73 +29,77 @@ class FinancialResultScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: context.height,
-      child: SafeArea(
-        child: Scaffold(
-          body: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  color: AppColors.lightest,
-                  child: const KalshiHeader(),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16),
-                  child: Column(
-                    children: [
-                      const Padding(
-                        padding: EdgeInsets.symmetric(vertical: 24),
-                        child: StyledFinancialRichText(
-                          firstLabel: AppStrings.financialResultsTitleInitial,
-                          secondlabel: AppStrings.financialResultsTitleFinal,
-                        ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.symmetric(vertical: 24),
-                        padding: const EdgeInsets.all(16),
-                        decoration: const BoxDecoration(
-                          color: AppColors.lightest,
-                          borderRadius: BorderRadius.all(Radius.circular(8)),
-                          boxShadow: [
-                            BoxShadow(
-                              color: AppColors.boxShadow,
-                              offset: Offset(0, 2),
-                              blurRadius: 12,
-                              spreadRadius: 0,
-                            ),
-                          ],
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const StyledIconCard(),
-                            FinancialResultCardInformation(
-                              status: financialHealthStatus,
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 16),
-                              child: StyledButton(
-                                text: AppStrings.financialResultsButtonLabel,
-                                backgroundColor: Colors.transparent,
-                                outlineColor: AppColors.blue,
-                                textColor: AppColors.blue,
-                                action: () {
-                                  Navigator.of(context).pop();
-                                },
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      const SizedBox(height: 24),
-                      const StyledGdprInformationData(),
-                      const SizedBox(height: 16),
-                    ],
+    return PopScope(
+      canPop: false,
+      child: SizedBox(
+        height: context.height,
+        child: SafeArea(
+          child: Scaffold(
+            body: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    color: AppColors.lightest,
+                    child: const KalshiHeader(),
                   ),
-                ),
-              ],
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    child: Column(
+                      children: [
+                        const Padding(
+                          padding: EdgeInsets.symmetric(vertical: 24),
+                          child: StyledFinancialRichText(
+                            firstLabel: AppStrings.financialResultsTitleInitial,
+                            secondlabel: AppStrings.financialResultsTitleFinal,
+                          ),
+                        ),
+                        Container(
+                          margin: const EdgeInsets.symmetric(vertical: 24),
+                          padding: const EdgeInsets.all(16),
+                          decoration: const BoxDecoration(
+                            color: AppColors.lightest,
+                            borderRadius: BorderRadius.all(Radius.circular(8)),
+                            boxShadow: [
+                              BoxShadow(
+                                color: AppColors.boxShadow,
+                                offset: Offset(0, 2),
+                                blurRadius: 12,
+                                spreadRadius: 0,
+                              ),
+                            ],
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const StyledIconCard(),
+                              FinancialResultCardInformation(
+                                status: financialHealthStatus,
+                              ),
+                              Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(vertical: 16),
+                                child: StyledButton(
+                                  text: AppStrings.financialResultsButtonLabel,
+                                  backgroundColor: Colors.transparent,
+                                  outlineColor: AppColors.blue,
+                                  textColor: AppColors.blue,
+                                  action: () {
+                                    Navigator.of(context).pop();
+                                  },
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        const SizedBox(height: 24),
+                        const StyledGdprInformationData(),
+                        const SizedBox(height: 16),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
