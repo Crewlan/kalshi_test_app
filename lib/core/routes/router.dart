@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:kalshi_test_app/features/financial/data/models/financial_health_status.dart';
+import 'package:kalshi_test_app/features/financial_results/presentation/screen/financial_result_screen.dart';
 
 import '../../features/financial/presentation/cubit/financial_health_cubit.dart';
 import '../../features/financial/presentation/screens/financial_screen.dart';
@@ -19,6 +21,14 @@ class AppRouter {
           ),
         );
       case Routes.resultsScreen:
+        return CupertinoPageRoute(
+          builder: (context) => FinancialResultScreen.withArgs(
+            FinancialResultScreenParams(
+              financialHealthStatus:
+                  settings.arguments as FinancialHealthStatus,
+            ),
+          ),
+        );
       default:
         return CupertinoPageRoute(
           settings: const RouteSettings(name: 'error_default'),

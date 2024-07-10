@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:kalshi_test_app/core/utils/app_colors.dart';
 
 import '../../../../core/extensions/ui_helper_extension.dart';
 import '../../../../core/routes/routes.dart';
@@ -15,18 +16,18 @@ class FinancialScreen extends StatelessWidget {
       height: context.height,
       child: SafeArea(
         child: Scaffold(
+          backgroundColor: AppColors.lightest,
           body: BlocConsumer<FinancialHealthCubit, FinancialHealthState>(
             listener: (context, state) {
               if (state is FinancialReady) {
-                Navigator.of(context).pushNamed(Routes.resultsScreen);
+                Navigator.of(context).pushNamed(
+                  Routes.resultsScreen,
+                  arguments: state.financialHealthStatus,
+                );
               }
             },
             builder: (context, state) {
-              if (state is FinancialInitial) {
-                return const FinancialFormState();
-              } else {
-                return const Center(child: CircularProgressIndicator());
-              }
+              return const FinancialFormState();
             },
           ),
         ),

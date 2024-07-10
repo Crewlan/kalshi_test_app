@@ -63,7 +63,7 @@ class StyledButton extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 16),
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.all(Radius.circular(borderRadius))),
-          side: BorderSide(color: outlineColor),
+          side: BorderSide(color: outlineColor, width: 2),
           foregroundColor: textColor,
           backgroundColor:
               _buttonAction() != null ? backgroundColor : AppColors.blue,

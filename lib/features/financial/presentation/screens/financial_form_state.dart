@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:kalshi_test_app/core/utils/app_strings.dart';
+import 'package:kalshi_test_app/core/widgets/styled_icon_card.dart';
 import 'package:kalshi_test_app/features/financial/presentation/cubit/financial_health_cubit.dart';
 import 'package:kalshi_test_app/injection_container.dart';
 
@@ -11,7 +12,7 @@ import '../../../../core/widgets/styled_button.dart';
 import '../../../../core/widgets/styled_gdpr_information_data.dart';
 import '../../../../core/widgets/styled_text_form_field.dart';
 import '../widgets/financial_card_information.dart';
-import '../widgets/financial_header.dart';
+import '../../../../core/widgets/styled_financial_header.dart';
 
 class FinancialFormState extends StatefulWidget {
   const FinancialFormState({super.key});
@@ -59,7 +60,10 @@ class _FinancialFormStateState extends State<FinancialFormState> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(height: 24),
-                const FinancialHeader(),
+                const StyledFinancialRichText(
+                  firstLabel: AppStrings.financialFormTitleInitial,
+                  secondlabel: AppStrings.financialFormTitleFinal,
+                ),
                 Container(
                   margin: const EdgeInsets.symmetric(vertical: 24),
                   padding: const EdgeInsets.all(16),
@@ -81,16 +85,7 @@ class _FinancialFormStateState extends State<FinancialFormState> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Center(
-                          child: Container(
-                            padding: const EdgeInsets.all(8),
-                            decoration: const BoxDecoration(
-                              color: AppColors.darkest,
-                              shape: BoxShape.circle,
-                            ),
-                            child: SvgPicture.asset(AppImages.selectAnIcon),
-                          ),
-                        ),
+                        const StyledIconCard(),
                         const FinancialCardInformation(),
                         const Text(
                           AppStrings.annualIncome,
