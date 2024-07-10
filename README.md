@@ -17,7 +17,7 @@ This project is a Flutter application that helps calculate users' financial heal
 - Fonts and Images
 
 ## Tests Coverage
-![Coverage](https://drive.google.com/uc?id=1MGSqhVU0BzMGQSV3Ak3A0D4ITNLaUrWp)
+![Coverage](https://drive.google.com/uc?id=19jpM3Hz6pmvugyo4u5Mz52K5MytQ2ZLs)
 
 ### Running Tests
 To run the tests for this project, use the following command:
