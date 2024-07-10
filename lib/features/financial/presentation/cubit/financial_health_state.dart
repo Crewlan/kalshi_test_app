@@ -3,19 +3,18 @@ part of 'financial_health_cubit.dart';
 enum FinancialStatus { initial, loading, ready }
 
 abstract class FinancialHealthState extends Equatable {
-  final FinancialStatus status;
-  const FinancialHealthState({required this.status});
+  const FinancialHealthState();
 
   @override
   List<Object> get props => [];
 }
 
 class FinancialInitial extends FinancialHealthState {
-  const FinancialInitial({required super.status});
+  const FinancialInitial();
 }
 
 class FinancialLoading extends FinancialHealthState {
-  const FinancialLoading({required super.status});
+  const FinancialLoading();
 }
 
 class FinancialReady extends FinancialHealthState {
@@ -23,6 +22,14 @@ class FinancialReady extends FinancialHealthState {
 
   const FinancialReady({
     required this.financialHealthStatus,
-    required super.status,
   });
+}
+
+class FinancialValid extends FinancialHealthState {
+  const FinancialValid();
+}
+
+class FinancialError extends FinancialHealthState {
+  final String message;
+  const FinancialError({required this.message});
 }

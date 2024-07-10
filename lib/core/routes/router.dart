@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:kalshi_test_app/features/financial/data/models/financial_health_status.dart';
-import 'package:kalshi_test_app/features/financial_results/presentation/screen/financial_result_screen.dart';
+import '../../features/financial/data/models/financial_health_status.dart';
+import '../../features/financial_results/presentation/screen/financial_result_screen.dart';
 
 import '../../features/financial/presentation/cubit/financial_health_cubit.dart';
 import '../../features/financial/presentation/screens/financial_screen.dart';
@@ -17,7 +17,7 @@ class AppRouter {
         return CupertinoPageRoute(
           builder: (context) => BlocProvider.value(
             value: financialHealthCubit,
-            child: const FinancialScreen(),
+            child: FinancialScreen(),
           ),
         );
       case Routes.resultsScreen:

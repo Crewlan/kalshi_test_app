@@ -20,4 +20,10 @@ class AppStrings {
   static const financialResultsSubtitleCardLow = 'Unhealthy.';
   static const financialResultsBody = 'Your financial wellness score is \n';
   static const financialResultsButtonLabel = 'Return';
+  static const financialScreenButtonLabel = 'Continue';
+  static const financialScreenSnackbarLabel = 'Please correct the errors';
+  static const financialFormValidationIfIsNull = 'This field is required';
+  static const financialFormValidationNumber = 'Please enter a valid number';
+  static const financialFormValidationMoreThanZero =
+      'Value must be greater than zero';
 }

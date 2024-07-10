@@ -10,13 +10,13 @@ class FinancialHealthCubit extends KalshiCubit<FinancialHealthState> {
   final CalculateFinancialHealth calculateFinancialHealth;
 
   FinancialHealthCubit({required this.calculateFinancialHealth})
-      : super(const FinancialInitial(status: FinancialStatus.initial));
+      : super(const FinancialInitial());
 
   void calculateFinancialWellness({
     required double annualIncome,
     required double montlyCosts,
   }) {
-    emit(const FinancialLoading(status: FinancialStatus.loading));
+    emit(const FinancialLoading());
 
     var resultFinancialHealth = calculateFinancialHealth(
       annualIncome,
@@ -25,7 +25,6 @@ class FinancialHealthCubit extends KalshiCubit<FinancialHealthState> {
 
     emit(FinancialReady(
       financialHealthStatus: resultFinancialHealth,
-      status: FinancialStatus.ready,
     ));
   }
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:kalshi_test_app/core/widgets/styled_financial_header.dart';
-import 'package:kalshi_test_app/features/financial/data/models/financial_health_status.dart';
-import 'package:kalshi_test_app/features/financial_results/presentation/widgets/health_status_bar.dart';
+import '../../../../core/widgets/styled_financial_header.dart';
+import '../../../financial/data/models/financial_health_status.dart';
+import 'health_status_bar.dart';
 
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_strings.dart';

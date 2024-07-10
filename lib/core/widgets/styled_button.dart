@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kalshi_test_app/core/extensions/ui_helper_extension.dart';
 
+import '../extensions/ui_helper_extension.dart';
 import '../utils/app_colors.dart';
 
 class StyledButton extends StatelessWidget {
